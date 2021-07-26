@@ -11,7 +11,11 @@ class MovieModelForm(forms.ModelForm):
             'rating',
         )
 
-class ReviewForm(forms.Form):
-    title = forms.ChoiceField()
-    author = forms.ChoiceField()
-    details = forms.CharField(label='Review', max_length=3000, widget=forms.Textarea)
+class ReviewModelForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = (
+            'title',
+            'author',
+            'details',
+        )
