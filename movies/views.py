@@ -29,8 +29,7 @@ class MovieCreateView(generic.CreateView):
 			subject="A movie has been added to the list",
 			message="Click the link below to see details of the movie",
 			from_email="emekamba10@gmail.com",
-			recipient_list="[admin@stonereviews.com]"
-
+			recipient_list=["admin@stonereviews.com"]
 		)
 		return super(MovieCreateView, self).form_valid(form)
 

@@ -1,9 +1,12 @@
 from django.db import models
 from django.db.models.deletion import CASCADE
 from django.utils import timezone
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
+
+class User(AbstractUser):
+    pass
 
 class Movie(models.Model):
     title = models.CharField(max_length=200)
