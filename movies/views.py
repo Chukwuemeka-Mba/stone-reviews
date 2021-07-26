@@ -26,9 +26,13 @@ class MovieCreateView(generic.CreateView):
 	def form_valid(self, form):
 		# TODO send email
 		send_mail(
-			
+			subject="A movie has been added to the list",
+			message="Click the link below to see details of the movie",
+			from_email="emekamba10@gmail.com",
+			recipient_list="[admin@stonereviews.com]"
+
 		)
-		return super().form_valid(form)
+		return super(MovieCreateView, self).form_valid(form)
 
 
 def movie_detail(request, pk):
